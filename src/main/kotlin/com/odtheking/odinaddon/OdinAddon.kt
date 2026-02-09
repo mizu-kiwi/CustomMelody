@@ -11,12 +11,10 @@ object OdinAddon : ClientModInitializer {
 
     override fun onInitializeClient() {
         println("Low Guy initialized!")
-
-
         // Register objects to event bus by adding to the list
         listOf(this).forEach { EventBus.subscribe(it) }
 
         // Register modules by adding to the list
-        ModuleManager.registerModules(ModuleConfig("OdinAddon.json"), MelodyMessage)
+        ModuleManager.registerModules(ModuleConfig("LowGuyAddon.json"), MelodyMessage)
     }
 }
